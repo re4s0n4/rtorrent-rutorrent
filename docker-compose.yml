@@ -1,0 +1,11 @@
+version: '3'
+services:
+    rutorrent:
+        container_name: rutorrent
+        ports:
+            - '8080:80'
+            - '55950-56000:55950-56000'
+        volumes:
+            - '/media/USB/videos:/downloads'
+        restart: unless-stopped
+        image: diameter/rtorrent-rutorrent:latest
